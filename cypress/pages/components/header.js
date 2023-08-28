@@ -31,14 +31,14 @@ class header {
     this.clothingButton.click();
   }
 
-  get bestsellersButton() {
+  get bestSellersButton() {
     return cy.get(
       "#e87ba617-daa1-4b64-8f36-ab92e61283f7 li:nth-child(1) > .R5kwVNg",
     );
   }
 
   clickBestsellersButton() {
-    this.bestsellersButton.click();
+    this.bestSellersButton.click();
   }
 
   get favIconButton() {
@@ -46,6 +46,7 @@ class header {
   }
 
   clickFavIconButton() {
+    this.favIconButton.scrollIntoView()
     this.favIconButton.click();
   }
 }

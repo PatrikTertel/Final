@@ -1,12 +1,20 @@
 class itemPage {
-  get addButton() {
-    return cy.get(".jAEfQ");
+  get addToBagButton() {
+    return cy.get(`[data-testid="add-button"]`);
   }
 
-  clickAddButton() {
-    this.addButton.scrollIntoView();
-    this.addButton.click();
+  clickAddToBagButton() {
+    this.addToBagButton.click();
   }
+
+  get sizeButton() {
+    return cy.get("#variantSelector");
+  }
+
+  clickSizeButton() {
+    this.sizeButton.click()
+  }
+
 }
 
 module.exports = new itemPage();

@@ -2,7 +2,8 @@ const BasePage = require("./basePage");
 
 class mainPage extends BasePage {
   get deliverPopup() {
-    return cy.get(".UNPPQ3g");
+    cy.wait(2000)
+    return cy.get(".UNPPQ3g", { timeout: 10000 }).should('be.visible');
   }
 
   clickDeliverPopup() {
